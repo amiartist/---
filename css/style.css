@@ -1,0 +1,506 @@
+:root {
+    --back-clr: #FAFCF9;
+    --green-clr: #16A41C;
+    --wood-clr: #482728;
+    --black-clr: #242424;
+    --white-clr: #fff;
+}
+
+@font-face {
+    font-family: 'Hussar';
+    src: url(../fonts/HussarSzturm.otf);
+}
+
+@font-face {
+    font-family: 'Hussar Italic';
+    src: url(../fonts/HussarSzturmObl.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-clr);
+    transition: .2s linear color;
+}
+
+a:hover {
+    color: var(--green-clr);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--back-clr);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--black-clr);
+    overflow-x: hidden;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 45px;
+}
+
+/* HEADER =================================================*/
+
+.header__top {
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__link {
+    display: flex;
+    align-items: center;
+}
+
+.logo__link p {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.logo__link span {
+    font-family: 'Hussar Italic';
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__item+.nav__item {
+    margin-left: 28px;
+}
+
+.phone__link {
+    font-size: 30px;
+    margin-right: 28px;
+}
+
+.btn {
+    font-weight: 500;
+    color: var(--white-clr);
+    background-color: var(--green-clr);
+    padding: 24px 40px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: var(--white-clr);
+}
+
+.header__inner {
+    width: 100%;
+    position: relative;
+    margin-bottom: 160px;
+}
+
+.header__inner h1 {
+    text-transform: uppercase;
+    font-family: 'Hussar Italic';
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.header__inner h2 {
+    width: 860px;
+    text-transform: uppercase;
+    font-family: 'Hussar Italic';
+    font-size: 28px;
+    line-height: 134%;
+    margin-bottom: 40px;
+}
+
+.header__inner ul {
+    margin-bottom: 130px;
+}
+
+.header__inner li {
+    display: flex;
+    align-items: center;
+}
+
+.header__inner li+li {
+    margin-top: 32px;
+}
+
+.header__inner li img {
+    margin-right: 12px;
+}
+
+.btns .btn+.btn {
+    margin-left: 24px;
+}
+
+.btns .btn:last-child {
+    border: 2px solid var(--green-clr);
+    background-color: transparent;
+    color: var(--black-clr);
+}
+
+.header__img {
+    position: absolute;
+    bottom: -100px;
+    left: 800px;
+}
+
+/* EXPERIENCE ==============================================*/
+
+.exp {
+    margin-bottom: 160px;
+}
+
+.exp ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.exp ul li+li {
+    margin-left: 140px;
+}
+
+.exp ul li p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 160px;
+    position: relative;
+}
+
+.exp ul li p::before {
+    content: attr(data);
+    font-family: 'Hussar Italic';
+    font-size: 100px;
+    color: var(--wood-clr);
+    position: absolute;
+    top: -90px;
+    left: 0;
+}
+
+/* PORTFOLIO ==================================================*/
+
+.portfolio {
+    margin-bottom: 160px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: 'Hussar Italic';
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.catalog {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--green-clr);
+    border-radius: 14px;
+    padding: 0 20px 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img {
+    width: 360px;
+    margin-bottom: 20px;
+}
+
+.card__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.card__title::after {
+    content: attr(data);
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid var(--black-clr);
+    border-radius: 10px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+
+.card__description {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-family: 'Hussar Italic';
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.price span {
+    font-size: 20px;
+}
+
+.card .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.br {
+    width: 360px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--wood-clr);
+}
+
+.br img {
+    margin-left: 18px;
+}
+
+/* EXCURSION ==========================================================*/
+
+.excursion {
+    margin-bottom: 160px;
+    padding: 50px;
+    border: 2px solid var(--wood-clr);
+    border-radius: 20px;
+    position: relative;
+}
+
+.excursion .title {
+    margin-bottom: 20px;
+}
+
+.description {
+    width: 770px;
+    margin-bottom: 30px;
+}
+
+.excursion a {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+}
+
+.excursion img {
+    position: absolute;
+    top: -120px;
+    left: 900px;
+}
+
+/* ADVANTAGE ===========================================================*/
+
+.advantage {
+    margin-bottom: 110px;
+    text-align: center;
+}
+
+.advantage__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advantage__item {
+    width: 500px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.advantage__item img {
+    margin-bottom: 8px;
+}
+
+/* GALLERY ==============================================================*/
+
+.gallery {
+    margin-bottom: 160px;
+}
+
+.gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery__img {
+    width: 400px;
+    height: 323px;
+    border-radius: 14px;
+    margin-bottom: 40px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/house2.png);
+}
+
+.gallery__img:first-child {
+    width: 480px;
+    background-image: url(../img/house1.png);
+}
+
+.gallery__img:nth-child(3) {
+    width: 600px;
+    background-image: url(../img/house3.png);
+}
+
+.gallery__img:nth-child(4) {
+    background-image: url(../img/house4.png);
+}
+
+.gallery__img:nth-child(5) {
+    background-image: url(../img/house5.png);
+}
+
+.gallery__img:nth-child(6) {
+    width: 680px;
+    background-image: url(../img/house6.png);
+}
+
+/* CONTACT ================================================================*/
+
+.contact {
+    width: 680px;
+    margin: 0 100px 160px auto;
+    text-align: center;
+    position: relative;
+}
+
+.contact h3 {
+    margin-bottom: 4px;
+}
+
+.contact p {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 64px;
+}
+
+.contact form {
+    width: 680px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 94px;
+    border-radius: 10px;
+    border: 2px solid var(--wood-clr);
+    background-color: transparent;
+    margin-bottom: 24px;
+    padding: 32px;
+    font-size: 24px;
+    transition: .3s linear all;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--green-clr);
+}
+
+input::placeholder {
+    opacity: .5;
+    transition: .2s linear all;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+form .btn {
+    width: 360px;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.contact img {
+    position: absolute;
+    top: -40px;
+    left: -1400px;
+}
+
+/* MAP ======================================================================*/
+
+.map {
+    width: 100%;
+    margin-bottom: 160px;
+}
+
+.map iframe {
+    border-radius: 14px;
+}
+
+/* FOOTER ===================================================================*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h4 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.cop {
+    font-size: 16px;
+    margin-top: auto;
+}
+
+footer .logo__link {
+    margin-bottom: 44px;
+}
+
+.footer__link {
+    font-size: 16px;
+}
+
+.footer__link+.footer__link {
+    margin-top: 8px;
+}
+
+footer .phone__link {
+    margin-top: auto;
+}
